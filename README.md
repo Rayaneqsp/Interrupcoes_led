@@ -4,17 +4,17 @@ Atividade em grupo com o objetivo de realizar o acionamento dos 25 LEDs, de form
 
 # Modelo das pastas
 
-SRC
-├── Matriz_Led_PIO.c (arquivo principal a ser rodado)
-└── Util
-    ├── drawing.c (local de produção dos arrays de desenho)
-    ├── drawing.h
-    ├── keypad.c (responsável pela coordenação do keypad)
-    ├── keypad.h
-    ├── matrizLedControl.c (responsável pelo controle da matriz de led 5x5)
-    ├── matrizLedControl.h
-    ├── pins.h (guarda e salva os valores das GPIOs usadas)
-    └── ledStruct.h (salva o struct utilizado para o RGB)
+SRC  
+├── Matriz_Led_PIO.c (arquivo principal a ser rodado)  
+└── Util  
+    ├── drawing.c (local de produção dos arrays de desenho)  
+    ├── drawing.h  
+    ├── keypad.c (responsável pela coordenação do keypad)  
+    ├── keypad.h  
+    ├── matrizLedControl.c (responsável pelo controle da matriz de led 5x5)  
+    ├── matrizLedControl.h  
+    ├── pins.h (guarda e salva os valores das GPIOs usadas)  
+    └── ledStruct.h (salva o struct utilizado para o RGB)  
 
 # Funções
 

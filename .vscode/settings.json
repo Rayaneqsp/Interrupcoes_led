@@ -42,6 +42,9 @@
         "matrizledcontrol.h": "c",
         "keypad.h": "c",
         "clocks.h": "c",
-        "ledstruct.h": "c"
+        "ledstruct.h": "c",
+        "stdio.h": "c",
+        "stdint.h": "c",
+        "pio.h": "c"
     }
 }

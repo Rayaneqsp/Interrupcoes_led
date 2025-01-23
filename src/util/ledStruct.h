@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 #ifndef LEDSTRUCT_H
 #define LEDSTRUCT_H
 

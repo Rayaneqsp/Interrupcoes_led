@@ -9,32 +9,65 @@
 #include "util/matrizLedControl.h"
 #include "util/keypad.h"
 #include "util/drawing.h"
+#include "pins.h"
 
-void menu_message() {
+
+void menu_message()
+{
   printf("\nMatrix Led Menu:\n");
-  printf("Number - Exibits de number in LEDS\n");
-  printf("A - \n");
-  printf("B - \n");
-  printf("C - \n");
-  printf("D - \n");
-  printf("# - \n");
+  printf("Number - Exibits the number animation\n");
+  printf("A - Turn off leds\n");
+  printf("B - All Leds blue. 100.\n");
+  printf("C - All Leds red. 80.\n");
+  printf("D - All Leds green. 50.\n");
+  printf("# - All Leds white. 20.\n");
   printf("* - \n\n");
 }
 
-int main() {
-
+int main()
+{
   // Inicializa entradas e saídas.
   stdio_init_all();
+  printf("Init: ALL\n");
 
   // Inicializa o Keypad
   keypad_init();
+  printf("Init: Keypad\n");
 
   // Inicializa matriz de LEDs NeoPixel.
   npInit(LED_PIN);
-  // npClear();
+  printf("Init: LEDS\n");
+  npClear();
 
-  // Não faz mais nada. Loop infinito.
-  while (true) {
-    sleep_ms(1000);
+  // Loop de ações a serem completadas
+  while (true)
+  {
+    // Get the input from the board
+    char press_key = keypad_get_key();
+    if (press_key)
+      printf("Tecla pressionada: %c\n", press_key);
+    switch (press_key)
+    {
+    case 'A':
+      //
+      break;
+    case 'B':
+      //
+      break;
+    case 'C':
+      //
+      break;
+    case 'D':
+      //
+      break;
+    case '#':
+      //
+      break;
+    case '*':
+      //
+      break;
+    default:
+      sleep_ms(100);
+    }
   }
 }

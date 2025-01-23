@@ -48,8 +48,8 @@ pico_set_program_version(Matriz_Led_PIO "0.1")
 pico_generate_pio_header(Matriz_Led_PIO ${CMAKE_CURRENT_LIST_DIR}/ws2818b.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(Matriz_Led_PIO 0)
-pico_enable_stdio_usb(Matriz_Led_PIO 1)
+pico_enable_stdio_uart(Matriz_Led_PIO 1)
+pico_enable_stdio_usb(Matriz_Led_PIO 0)
 
 # Add the standard library to the build
 target_link_libraries(Matriz_Led_PIO
@@ -70,4 +70,3 @@ target_link_libraries(Matriz_Led_PIO
 
 
 pico_add_extra_outputs(Matriz_Led_PIO)
-

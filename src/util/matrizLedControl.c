@@ -9,6 +9,7 @@
 #include "ws2818b.pio.h"
 #include "matrizLedControl.h"
 #include "ledStruct.h"
+#include "pins.h"
 
 // Declaração do buffer de pixels que formam a matriz.
 npLED_t leds[LED_COUNT];

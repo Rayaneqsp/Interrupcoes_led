@@ -23,13 +23,13 @@ SRC
 ...
 
 Comandos do keypad:
-
+  
 [0-9]) Uma animação feita cada uma por um membro da equipe. utilizando 5 frames. A X frames por segundo.
-A) Desliga todos os LEDS
-B) Liga todos os LEDS na cor azul. Intensidade 100%.
-C) Liga todos os LEDS na cor vermelha. Intensidade 80%.
-D) Liga todos os LEDS na cor verde. Intensidade 50%.
-#) Liga todos os LEDS na cor branca. Intensidade 20%.
+A) Desliga todos os LEDS  
+B) Liga todos os LEDS na cor azul. Intensidade 100%.  
+C) Liga todos os LEDS na cor vermelha. Intensidade 80%.  
+D) Liga todos os LEDS na cor verde. Intensidade 50%.  
+#) Liga todos os LEDS na cor branca. Intensidade 20%.  
 
 ...
 

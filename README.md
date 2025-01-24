@@ -14,7 +14,7 @@ SRC
     ├── keypad.h  
     ├── matrizLedControl.c (responsável pelo controle da matriz de led 5x5)  
     ├── matrizLedControl.h  
-    ├── pins.h (guarda e salva os valores das GPIOs usadas)  
+    ├── definitions.h (guarda e salva Definições usadas)  
     └── ledStruct.h (salva o struct utilizado para o RGB) 
 ``` 
 
@@ -29,7 +29,7 @@ A) Desliga todos os LEDS
 B) Liga todos os LEDS na cor azul. Intensidade 100%.  
 C) Liga todos os LEDS na cor vermelha. Intensidade 80%.  
 D) Liga todos os LEDS na cor verde. Intensidade 50%.  
-#) Liga todos os LEDS na cor branca. Intensidade 20%.  
+#) Liga todos os LEDS na cor branca. Intensidade 20%. 
 
 ...
 

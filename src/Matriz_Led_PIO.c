@@ -9,8 +9,6 @@
 #include "util/matrizLedControl.h"
 #include "util/keypad.h"
 #include "util/drawing.h"
-#include "pins.h"
-
 
 void menu_message()
 {
@@ -24,6 +22,12 @@ void menu_message()
   printf("* - \n\n");
 }
 
+void clean_leds()
+{
+  npClear();
+  npWrite();
+}
+
 int main()
 {
   // Inicializa entradas e saídas.
@@ -35,7 +39,7 @@ int main()
   printf("Init: Keypad\n");
 
   // Inicializa matriz de LEDs NeoPixel.
-  npInit(LED_PIN);
+  npInit();
   printf("Init: LEDS\n");
   npClear();
 
@@ -48,8 +52,36 @@ int main()
       printf("Tecla pressionada: %c\n", press_key);
     switch (press_key)
     {
-    case 'A':
+    case '1':
       //
+      break;
+    case '2':
+      //
+      break;
+    case '3':
+      //
+      break;
+    case '4':
+      //
+      break;
+    case '5':
+      //
+      break;
+    case '6':
+      //
+      break;
+    case '7':
+      //
+      break;
+    case '8':
+      //
+      break;
+    case '9':
+      //
+      break;
+    case 'A':
+      clean_leds();
+      changeDrawing(draw_type_B);
       break;
     case 'B':
       //

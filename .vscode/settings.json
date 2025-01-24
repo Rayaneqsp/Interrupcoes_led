@@ -45,6 +45,8 @@
         "ledstruct.h": "c",
         "stdio.h": "c",
         "stdint.h": "c",
-        "pio.h": "c"
+        "pio.h": "c",
+        "pins.h": "c",
+        "bootrom.h": "c"
     }
 }

@@ -9,7 +9,10 @@
 #include "ws2818b.pio.h"
 #include "matrizLedControl.h"
 #include "ledStruct.h"
-#include "pins.h"
+#include "definitions.h"
+
+// Definição do pino dos LEDS.
+#define LED_PIN 7
 
 // Declaração do buffer de pixels que formam a matriz.
 npLED_t leds[LED_COUNT];
@@ -21,7 +24,7 @@ uint sm;
 /**
  * Inicializa a máquina PIO para controle da matriz de LEDs.
  */
-void npInit(uint pin)
+void npInit()
 {
 
   // Cria programa PIO.
@@ -37,7 +40,7 @@ void npInit(uint pin)
   }
 
   // Inicia programa na máquina PIO obtida.
-  ws2818b_program_init(np_pio, sm, offset, pin, 800000.f);
+  ws2818b_program_init(np_pio, sm, offset, LED_PIN, 800000.f);
 
   // Limpa buffer de pixels.
   for (uint i = 0; i < LED_COUNT; ++i)
@@ -85,13 +88,30 @@ void npWrite()
 /**
  * Atera o brilho dos LEDS no buffer.
  */
-void brightness() {
- // CODE
+void brightness()
+{
+  // CODE
 }
 
 /**
  * Troca o desenho dos LEDS.
  */
-void changeDrawing() {
- // CODE
+void changeDrawing(npLED_t newDraw[])
+{
+  // Coloca os novos valores fornecidos no buffer
+  for (size_t i = 0; i < LED_COUNT; i++)
+  {
+    npSetLED(i, newDraw->R, newDraw->G, newDraw->B);
+  }
+
+  // Escreve nos LEDS
+  npWrite();
+}
+
+/**
+ * Realiza uma animação dos LEDS em um intervalo de tempo, usando a mudança de desenhos.
+ */
+void startAnimation()
+{
+  // CODE
 }

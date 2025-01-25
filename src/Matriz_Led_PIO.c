@@ -9,6 +9,8 @@
 #include "util/matrizLedControl.h"
 #include "util/keypad.h"
 #include "util/drawing.h"
+#include "pico/bootrom.h"
+
 
 void menu_message()
 {
@@ -96,7 +98,10 @@ int main()
       //
       break;
     case '*':
-      //
+      printf("Reiniciando no modo USB...\n");
+      sleep_ms(2000);
+      reset_usb_boot(0, 0);
+      
       break;
     default:
       sleep_ms(100);

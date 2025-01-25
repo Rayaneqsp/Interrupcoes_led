@@ -86,8 +86,10 @@ int main()
       changeDrawing(draw_type_B);
       break;
     case 'B':
-      //
-      break;
+    printf("Todos os LEDs azul, 100%% intensidade.\n");
+    matrizLedControl_setAll(0, 0, 255); // Azul puro (R=0, G=0, B=255)
+    break;
+
     case 'C':
       //
       break;

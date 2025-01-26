@@ -88,6 +88,14 @@ void npWrite()
 /**
  * Atera o brilho dos LEDS no buffer.
  */
+void matrizLedControl_setAll(uint8_t r, uint8_t g, uint8_t b)
+{
+    for (int i = 0; i < LED_COUNT; i++)
+    {
+        npSetLED(i, r, g, b); // Configura cada LED
+    }
+    npWrite(); // Aplica as mudanças nos LEDs
+}
 void brightness()
 {
   // CODE

@@ -11,7 +11,6 @@
 #include "util/drawing.h"
 #include "pico/bootrom.h"
 
-
 void menu_message()
 {
   printf("\nMatrix Led Menu:\n");
@@ -86,9 +85,9 @@ int main()
       changeDrawing(draw_type_B);
       break;
     case 'B':
-    printf("Todos os LEDs azul, 100%% intensidade.\n");
-    matrizLedControl_setAll(0, 0, 255); // Azul puro (R=0, G=0, B=255)
-    break;
+      printf("Todos os LEDs azul, 100%% intensidade.\n");
+      matrizLedControl_setAll(0, 0, 255); // Azul puro (R=0, G=0, B=255)
+      break;
 
     case 'C':
       printf("Todos os LEDs vermelhos, 80%% intensidade.\n");
@@ -104,7 +103,7 @@ int main()
       printf("Reiniciando no modo USB...\n");
       sleep_ms(2000);
       reset_usb_boot(0, 0);
-      
+
       break;
     default:
       sleep_ms(100);

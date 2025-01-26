@@ -91,7 +91,8 @@ int main()
     break;
 
     case 'C':
-      //
+      printf("Todos os LEDs vermelhos, 80%% intensidade.\n");
+      matrizLedControl_setAll(draw_type_C);
       break;
     case 'D':
       //

@@ -86,7 +86,7 @@ void npWrite()
 }
 
 /**
- * Atera o brilho dos LEDS no buffer.
+ * Troca o desenho dos LEDS sem usar a estrutura pronta.
  */
 void matrizLedControl_setAll(uint8_t r, uint8_t g, uint8_t b)
 {
@@ -96,6 +96,10 @@ void matrizLedControl_setAll(uint8_t r, uint8_t g, uint8_t b)
     }
     npWrite(); // Aplica as mudanças nos LEDs
 }
+
+/**
+ * Atera o brilho dos LEDS no buffer.
+ */
 void brightness()
 {
   // CODE
@@ -103,6 +107,8 @@ void brightness()
 
 /**
  * Troca o desenho dos LEDS.
+ * Recebe um array do struct npLED_t criado para rgb
+ * leia sobre em ledStruct.h
  */
 void changeDrawing(npLED_t newDraw[])
 {

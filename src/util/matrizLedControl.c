@@ -90,11 +90,11 @@ void npWrite()
  */
 void matrizLedControl_setAll(uint8_t r, uint8_t g, uint8_t b)
 {
-    for (int i = 0; i < LED_COUNT; i++)
-    {
-        npSetLED(i, r, g, b); // Configura cada LED
-    }
-    npWrite(); // Aplica as mudanças nos LEDs
+  for (int i = 0; i < LED_COUNT; i++)
+  {
+    npSetLED(i, r, g, b); // Configura cada LED
+  }
+  npWrite(); // Aplica as mudanças nos LEDs
 }
 
 /**
@@ -110,22 +110,40 @@ void brightness()
  * Recebe um array do struct npLED_t criado para rgb
  * leia sobre em ledStruct.h
  */
-void changeDrawing(npLED_t newDraw[])
+void changeDrawing(const npLED_t newDraw[])
 {
   // Coloca os novos valores fornecidos no buffer
-  for (size_t i = 0; i < LED_COUNT; i++)
-  {
-    npSetLED(i, newDraw->R, newDraw->G, newDraw->B);
+  for (size_t i = 0; i < LED_COUNT; i += 5) {
+    // Define o limite para os próximos 5 elementos
+    size_t limit = (i + 5 <= LED_COUNT) ? i + 5 : LED_COUNT;
+
+    if ((i / 5) % 2 == 0) {
+      // Coloca na ordem normal
+      for (size_t j = i; j < limit; j++)
+      {
+        npSetLED(j, newDraw[j].R, newDraw[j].G, newDraw[j].B);
+      }
+    } else {
+      // Coloca na ordem inversa
+      for (size_t j = limit; j > i; j--) {
+        npSetLED(limit - (j - i), newDraw[j - 1].R, newDraw[j - 1].G, newDraw[j - 1].B);
+      }
+    }
   }
 
-  // Escreve nos LEDS
+  // Escreve nos LEDs
   npWrite();
 }
 
 /**
  * Realiza uma animação dos LEDS em um intervalo de tempo, usando a mudança de desenhos.
  */
-void startAnimation()
+void startAnimation(const npLED_t animation_type[FRAMES][LED_COUNT])
 {
-  // CODE
+  for (size_t i = 0; i < FRAMES; i++) // Frame por frame
+  {
+    // Passa um frame completo para a função changeDrawing
+    changeDrawing(animation_type[i]);
+    sleep_ms(1000); // Aguarda 1 segundo antes de mudar para o próximo frame
+  }
 }

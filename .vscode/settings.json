@@ -47,6 +47,7 @@
         "stdint.h": "c",
         "pio.h": "c",
         "pins.h": "c",
-        "bootrom.h": "c"
+        "bootrom.h": "c",
+        "cstdint": "c"
     }
 }

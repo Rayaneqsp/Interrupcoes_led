@@ -12,5 +12,7 @@ extern const npLED_t draw_type_TAG[25]; // Basic white drawing
 
 // Export the variables of animations
 extern const npLED_t animation_type1[5][25]; // Ian Antunes - AnimationArray
+extern const npLED_t animation_type2[5][25]; // Matheus Vinicius - AnimationArray
+
 
 #endif

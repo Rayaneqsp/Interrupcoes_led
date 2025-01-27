@@ -58,7 +58,8 @@ int main()
       startAnimation(animation_type1);
       break;
     case '2':
-      //
+       printf("Animação iniciada: Matheus Vinicius.\n");
+      startAnimation(animation_type2);
       break;
     case '3':
       //

@@ -54,7 +54,8 @@ int main()
     switch (press_key)
     {
     case '1':
-      //
+      printf("Animação iniciada: Ian Antunes.\n");
+      startAnimation(animation_type1);
       break;
     case '2':
       //

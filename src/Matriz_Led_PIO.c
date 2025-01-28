@@ -63,8 +63,7 @@ int main()
       startAnimation(animation_type2);
       break;
     case '3':
-      printf("Animação iniciada: Rayane Queiroz.\n");
-      startAnimation(animation_type3);
+      
       break;
     case '4':
       
@@ -74,10 +73,12 @@ int main()
       startAnimation(animation_type5);
       break;
     case '6':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type6);
       break;
     case '7':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type7);
       break;
     case '8':
       //

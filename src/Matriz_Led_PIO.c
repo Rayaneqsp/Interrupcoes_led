@@ -62,7 +62,8 @@ int main()
       startAnimation(animation_type2);
       break;
     case '3':
-      //
+      printf ("Animacao iniciada: Samuel Canario");
+      startAnimation(animation_type3);
       break;
     case '4':
       //

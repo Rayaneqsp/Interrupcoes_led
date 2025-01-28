@@ -14,5 +14,5 @@ extern const npLED_t draw_type_TAG[25]; // Basic white drawing
 extern const npLED_t animation_type1[5][25]; // Ian Antunes - AnimationArray
 extern const npLED_t animation_type2[5][25]; // Matheus Vinicius - AnimationArray
 extern const npLED_t animation_type3[5][25]; // Rayane Queiroz - AnimationArray
-extern const npLED_t animation_type4[5][25]; // Rayane Queiroz - AnimationArray
+extern const npLED_t animation_type5[5][25]; // Rayane Queiroz - AnimationArray
 #endif

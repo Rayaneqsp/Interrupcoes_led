@@ -81,7 +81,8 @@ int main()
       startAnimation(animation_type7);
       break;
     case '8':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type8);
       break;
     case '9':
       //

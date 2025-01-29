@@ -16,4 +16,5 @@ extern const npLED_t animation_type2[5][25]; // Matheus Vinicius - AnimationArra
 extern const npLED_t animation_type5[5][25]; // Rayane Queiroz - AnimationArray
 extern const npLED_t animation_type6[5][25]; // Rayane Queiroz - AnimationArray
 extern const npLED_t animation_type7[5][25]; // Rayane Queiroz - AnimationArray
+extern const npLED_t animation_type8[5][25]; // Rayane Queiroz - AnimationArray
 #endif

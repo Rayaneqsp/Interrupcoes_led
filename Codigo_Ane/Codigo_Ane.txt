@@ -1,0 +1,2 @@
+Esta pasta foi feita a parte por Ane Paixão
+utilizando arduino para animação

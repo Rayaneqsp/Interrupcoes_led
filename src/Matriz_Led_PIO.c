@@ -87,6 +87,8 @@ int main()
       startAnimation(animation_type8);
       break;
     case '9':
+      printf("Animação iniciada: Taris Henrique");
+      startAnimation(animation_type9);
       //
       break;
     case 'A':

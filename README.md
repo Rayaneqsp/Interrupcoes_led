@@ -45,3 +45,5 @@ D) Liga todos os LEDS na cor verde. Intensidade 50%.
 ![Como compilar](images/wokwi_diagram.png)
 
 # Video do funcionamento
+
+https://youtu.be/kSlbaWHikKI

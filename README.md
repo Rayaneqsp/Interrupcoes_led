@@ -43,6 +43,7 @@ Comandos do keypad:
     3-Liga a cor laranja (Atenção diminua a velocidade)
     4-Liga a cor verde (Seguir)
     5-Um carro (Para demonstrar que está seguindo caminho)
+ Representação em imagem:
 ![Imagem] (imagens/Botão 8.png)
 
 A) Desliga todos os LEDS  

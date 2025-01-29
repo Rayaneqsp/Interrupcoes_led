@@ -50,5 +50,5 @@
         "bootrom.h": "c",
         "cstdint": "c"
     },
-    "git.ignoreLimitWarning": true
+    
 }

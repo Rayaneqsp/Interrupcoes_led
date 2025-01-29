@@ -59,7 +59,7 @@ int main()
       startAnimation(animation_type1);
       break;
     case '2':
-       printf("Animação iniciada: Matheus Vinicius.\n");
+      printf("Animação iniciada: Matheus Vinicius.\n");
       startAnimation(animation_type2);
       break;
     case '3':
@@ -71,16 +71,20 @@ int main()
       startAnimation(animation_type4);
       break;
     case '5':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type5);
       break;
     case '6':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type6);
       break;
     case '7':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type7);
       break;
     case '8':
-      //
+      printf("Animação iniciada: Rayane Queiroz.\n");
+      startAnimation(animation_type8);
       break;
     case '9':
       //

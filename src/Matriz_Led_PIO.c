@@ -104,10 +104,12 @@ int main()
       // matrizLedControl_setAll(draw_type_C);
       break;
     case 'D':
-      //
+      printf("Todos os LEDs verdes, 50%% intensidade.\n");
+      changeDrawing(draw_type_D);
       break;
     case '#':
-      //
+      printf("Todos os LEDs brancos, 20%% intensidade.\n");
+      changeDrawing(draw_type_TAG);
       break;
     case '*':
       printf("Reiniciando no modo USB...\n");

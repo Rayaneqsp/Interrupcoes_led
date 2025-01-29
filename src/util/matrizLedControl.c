@@ -146,4 +146,7 @@ void startAnimation(const npLED_t animation_type[FRAMES][LED_COUNT])
     changeDrawing(animation_type[i]);
     sleep_ms(1000); // Aguarda 1 segundo antes de mudar para o próximo frame
   }
+
+  // Limpa leds
+  npClear();
 }

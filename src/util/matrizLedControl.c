@@ -13,6 +13,8 @@
 
 // Definição do pino dos LEDS.
 #define LED_PIN 7
+#define BRIGHTNESS 25
+
 
 // Declaração do buffer de pixels que formam a matriz.
 npLED_t leds[LED_COUNT];
@@ -100,50 +102,38 @@ void matrizLedControl_setAll(uint8_t r, uint8_t g, uint8_t b)
 /**
  * Atera o brilho dos LEDS no buffer.
  */
-void brightness()
+void apply_brightness(int brightness)
 {
-  // CODE
+  for (uint i = 0; i < LED_COUNT; ++i)
+  {
+    leds[i].R = (leds[i].R * BRIGHTNESS) / 100;
+    leds[i].G = (leds[i].G * BRIGHTNESS) / 100;
+    leds[i].B = (leds[i].B * BRIGHTNESS) / 100;
+  }
 }
 
 /**
- * Troca o desenho dos LEDS.
+ * Troca os números dos LEDS.
  * Recebe um array do struct npLED_t criado para rgb
  * leia sobre em ledStruct.h
  */
-void changeDrawing(const npLED_t newDraw[])
-{
-  // Coloca os novos valores fornecidos no buffer
-  for (size_t i = 0; i < LED_COUNT; i += 5) {
-    // Define o limite para os próximos 5 elementos
-    size_t limit = (i + 5 <= LED_COUNT) ? i + 5 : LED_COUNT;
-
-    if ((i / 5) % 2 == 0) {
-      // Coloca na ordem normal
-      for (size_t j = i; j < limit; j++)
-      {
-        npSetLED(j, newDraw[j].R, newDraw[j].G, newDraw[j].B);
-      }
-    } else {
-      // Coloca na ordem inversa
-      for (size_t j = limit; j > i; j--) {
-        npSetLED(limit - (j - i), newDraw[j - 1].R, newDraw[j - 1].G, newDraw[j - 1].B);
-      }
+void changeDrawing(const npLED_t newDraw[]) {
+    for (size_t i = 0; i < LED_COUNT; ++i) {
+        npSetLED(i, newDraw[i].R, newDraw[i].G, newDraw[i].B);
+        printf("LED %d - R:%d, G:%d, B:%d\n", i, newDraw[i].R, newDraw[i].G, newDraw[i].B);
     }
-  }
-
-  // Escreve nos LEDs
-  npWrite();
+    npWrite();
 }
 
 /**
  * Realiza uma animação dos LEDS em um intervalo de tempo, usando a mudança de desenhos.
  */
-void startAnimation(const npLED_t animation_type[FRAMES][LED_COUNT])
+void startAnimation(const npLED_t num_[FRAMES][LED_COUNT])
 {
   for (size_t i = 0; i < FRAMES; i++) // Frame por frame
   {
     // Passa um frame completo para a função changeDrawing
-    changeDrawing(animation_type[i]);
+    changeDrawing(num_[i]);
     sleep_ms(1000); // Aguarda 1 segundo antes de mudar para o próximo frame
   }
 

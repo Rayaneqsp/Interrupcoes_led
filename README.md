@@ -16,5 +16,5 @@
    - O **Botão A** avança para o próximo número, e o **Botão B** retrocede.
    - Só apresenta os próximos números quando o **Botão A** é pressionado pela primeira vez.
 
-**Link do vídeo:**https://www.dropbox.com/referrals/AADLdKHyjQWB_QiVqVbmLjVpCDlrQ5NASgI?src=global9
+Link do vídeo:https://www.dropbox.com/referrals/AADLdKHyjQWB_QiVqVbmLjVpCDlrQ5NASgI?src=global9
 

@@ -6,14 +6,15 @@
 #include "util/matrizLedControl.h"
 #include "util/drawing.h"
 
-#define LED_RGB_RED_PIN 13   
-#define LED_RGB_GREEN_PIN 11 
-#define LED_RGB_BLUE_PIN 12  
+#define LED_RGB_RED_PIN 13   // Defina o pino do LED vermelho
+#define LED_RGB_GREEN_PIN 11 // Defina o pino do LED verde (se necessário)
+#define LED_RGB_BLUE_PIN 12  // Defina o pino do LED azul (se necessário)
 #define BUTTON_A_PIN 5
 #define BUTTON_B_PIN 6
 
+// Variáveis globais para controlar o estado atual da animação
 int current_animation = 0;
-int total_animations = 11; 
+int total_animations = 11; // Total de animações disponíveis
 
 // Função para exibir a mensagem do menu
 void menu_message()
@@ -28,8 +29,8 @@ void menu_message()
     printf("8");
     printf("9");
     printf("ok");
-    printf("Pressione A para avançar para a próximo número.\n");
-    printf("Pressione B para retornar ao número anterior.\n");
+    printf("Pressione A para avançar para a próxima animação.\n");
+    printf("Pressione B para retornar à animação anterior.\n");
 }
 
 // Função para limpar os LEDs
@@ -174,6 +175,7 @@ int main()
 
     // Exibe o menu
     menu_message();
+
     // Inicia a primeira animação
     start_current_animation();
 

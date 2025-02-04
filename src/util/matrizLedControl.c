@@ -106,9 +106,9 @@ void apply_brightness(int brightness)
 {
   for (uint i = 0; i < LED_COUNT; ++i)
   {
-    leds[i].R = (leds[i].R * BRIGHTNESS) / 100;
-    leds[i].G = (leds[i].G * BRIGHTNESS) / 100;
-    leds[i].B = (leds[i].B * BRIGHTNESS) / 100;
+    leds[i].R = (leds[i].R * BRIGHTNESS) / 1;
+    leds[i].G = (leds[i].G * BRIGHTNESS) / 1;
+    leds[i].B = (leds[i].B * BRIGHTNESS) / 1;
   }
 }
 

@@ -17,5 +17,6 @@ extern const npLED_t num_6[25];
 extern const npLED_t num_7[25]; 
 extern const npLED_t num_8[25]; 
 extern const npLED_t num_9[25]; 
+extern const npLED_t ok[25]; 
 
 #endif

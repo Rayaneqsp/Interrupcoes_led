@@ -1,5 +1,7 @@
 build
 wide.txt
+keypad.h
+keypad.c
 
 # Compiled Object files
 *.o

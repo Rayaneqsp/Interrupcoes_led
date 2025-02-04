@@ -1,4 +1,0 @@
-[wokwi]
-version = 1
-firmware = 'build/Matriz_Led_PIO.uf2'
-elf = 'build/Matriz_Led_PIO.elf'

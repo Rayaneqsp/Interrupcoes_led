@@ -8,14 +8,14 @@
 #include "hardware/sync.h"
 #include "ws2812.pio.h" 
 
-// Definições de pinos e números de LEDs
+// Definições de pinos 
 #define NUM_PIXELS 30           
 #define LED_PIN 7                
 #define RED_PIN 13              
 #define GREEN_PIN 11            
 #define BLUE_PIN 12             
-#define BUTTON_INC_PIN 5       
-#define BUTTON_DEC_PIN 6       
+#define BUTTON_A_PIN 5       
+#define BUTTON_B_PIN 6       
 
 // Variáveis globais para controle do número exibido
 volatile int current_number = 0;
@@ -39,9 +39,9 @@ void debounce_and_update(uint gpio, uint32_t events) {
     static absolute_time_t last_time = {0};
     
     if (absolute_time_diff_us(last_time, get_absolute_time()) > 200000) {
-        if (gpio == BUTTON_INC_PIN) {
+        if (gpio == BUTTON_A_PIN) {
             current_number = (current_number + 1) % 10; // Incrementa
-        } else if (gpio == BUTTON_DEC_PIN) {
+        } else if (gpio == BUTTON_B_PIN) {
             current_number = (current_number - 1 + 10) % 10; // Decrementa
         }
         last_time = get_absolute_time(); // Atualiza o tempo
@@ -69,14 +69,14 @@ void setup_rgb_leds() {
 
 // Configuração dos botões
 void setup_buttons() {
-    gpio_init(BUTTON_INC_PIN);
-    gpio_init(BUTTON_DEC_PIN);
+    gpio_init(BUTTON_A_PIN);
+    gpio_init(BUTTON_B_PIN);
     
-    gpio_set_dir(BUTTON_INC_PIN, GPIO_IN);
-    gpio_set_dir(BUTTON_DEC_PIN, GPIO_IN);
+    gpio_set_dir(BUTTON_A_PIN, GPIO_IN);
+    gpio_set_dir(BUTTON_B_PIN, GPIO_IN);
     
-    gpio_pull_up(BUTTON_INC_PIN); // Ativa o pull-up
-    gpio_pull_up(BUTTON_DEC_PIN); // Ativa o pull-up
+    gpio_pull_up(BUTTON_A_PIN); // Ativa o pull-up
+    gpio_pull_up(BUTTON_B_PIN); // Ativa o pull-up
 }
 
 // Função para piscar o LED RGB
@@ -105,8 +105,8 @@ int main() {
     setup_rgb_leds(); // Configura os LEDs RGB
 
     // Configura interrupções para os botões
-    gpio_set_irq_enabled_with_callback(BUTTON_INC_PIN, GPIO_IRQ_EDGE_FALL, true, debounce_and_update);
-    gpio_set_irq_enabled_with_callback(BUTTON_DEC_PIN, GPIO_IRQ_EDGE_FALL, true, debounce_and_update);
+    gpio_set_irq_enabled_with_callback(BUTTON_A_PIN, GPIO_IRQ_EDGE_FALL, true, debounce_and_update);
+    gpio_set_irq_enabled_with_callback(BUTTON_B_PIN, GPIO_IRQ_EDGE_FALL, true, debounce_and_update);
 
     while (true) {
         blink_rgb_led(); // Pisca o LED RGB

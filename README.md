@@ -46,6 +46,10 @@ Este projeto foi desenvolvido para a **placa BitDogLab** utilizando o microcontr
 
 - **Debouncing**: O código trata o efeito de bouncing nos botões utilizando uma técnica de debouncing via software, que evita múltiplas leituras de um único pressionamento.
 - **Exibição de Números**: A exibição de números de 0 a 9 é feita de forma estática, com cada número sendo representado por uma combinação fixa de LEDs acesos na matriz 5x5.
+- 
+### Licença
+
+Este programa foi desenvolvido como um exemplo educacional e pode ser usado gratuitamente para fins de estudo e aprendizagem.
 
 # Autora:
 Rayane Queiroz dos Santos Passos
